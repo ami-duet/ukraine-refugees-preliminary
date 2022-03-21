@@ -118,7 +118,10 @@ const buildLineChart = (data) => {
     .append("text")
       .text(d => d3.format(",")(data.find(day => day.date === d).individual_daily))
       .attr("x", d => xScale(d))
-      .attr("y", d => yScale(data.find(day => day.date === d).individual_daily) - 45)
+      .attr("y", (d, i) => {
+        const verticalSpacing = i === 0 ? 70 : 45;
+        return yScale(data.find(day => day.date === d).individual_daily) - verticalSpacing;
+      })
       .attr("text-anchor", "middle");
   numberLabels
     .append("line")
@@ -127,6 +130,12 @@ const buildLineChart = (data) => {
       .attr("x2", d => xScale(d))
       .attr("y2", d => yScale(data.find(day => day.date === d).individual_daily))
       .attr("stroke", "#7C5959");
+  numberLabels
+    .append("text")
+      .text("Refugees")
+      .attr("x", xScale(data[0].date))
+      .attr("y", yScale(data[0].individual_daily) - 45)
+      .attr("text-anchor", "middle");
 
 
 };

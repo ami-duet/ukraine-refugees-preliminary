@@ -5,6 +5,8 @@
 }
 
 svg text {
+  font-size: 2rem;
+  font-style: italic;
   fill: #421B1B;
 }
 
@@ -18,12 +20,6 @@ svg text {
 .tick line {
   stroke: #fff;
   stroke-width: 2px;
-}
-
-/* Labels */
-.labels text {
-  font-style: italic;
-  font-size: 2rem;
 }
 
 /* Boots */
