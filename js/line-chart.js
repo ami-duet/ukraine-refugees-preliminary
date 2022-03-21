@@ -88,12 +88,12 @@ const buildLineChart = (data) => {
   // Append date labels
   const dateLabels = innerChart
     .append("g")
-      .attr("class", "date-labels")
+      .attr("class", "labels date-labels")
     .selectAll(".date-label")
     .data(highlightedDates)
     .join("text")
       .attr("class", "label date-label")
-      .attr("transform", d => `translate(${xScale(d)}, ${innerHeight + 25})`);
+      .attr("transform", d => `translate(${xScale(d)}, ${innerHeight + 30})`);
   dateLabels
     .append("tspan")
       .text(d => d3.timeFormat("%b")(d))
@@ -103,13 +103,13 @@ const buildLineChart = (data) => {
     .append("tspan")
       .text(d => d3.timeFormat("%d")(d))
       .attr("x", 0)
-      .attr("dy", 18)
+      .attr("dy", 25)
       .attr("text-anchor", "middle");
 
   // Append number labels
   const numberLabels = innerChart
     .append("g")
-      .attr("class", "number-labels")
+      .attr("class", "labels number-labels")
     .selectAll(".number-label")
     .data(highlightedDates)
     .join("g")

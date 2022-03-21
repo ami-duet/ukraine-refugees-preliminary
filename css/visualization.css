@@ -3,9 +3,9 @@
   width: 100%;
   max-width: 800px;
 }
-.responsive-svg-container.small {
-  margin: 0 auto;
-  max-width: 300px;
+
+svg text {
+  fill: #421B1B;
 }
 
 /* x-axis */
@@ -18,6 +18,12 @@
 .tick line {
   stroke: #fff;
   stroke-width: 2px;
+}
+
+/* Labels */
+.labels text {
+  font-style: italic;
+  font-size: 2rem;
 }
 
 /* Boots */
