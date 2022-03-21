@@ -1,0 +1,44 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+  width: 100%;
+  max-width: 800px;
+}
+.responsive-svg-container.small {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* x-axis */
+.domain {
+  display: none;
+}
+.tick text {
+  display: none;
+}
+.tick line {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+/* Boots */
+#refugees-per-day {
+  position: relative;
+}
+.refugees-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+/* .refugees-bg.top {
+  top: 0;
+  height: 400px;
+  background-image: url(/assets/boots-top.svg);
+}
+.refugees-bg.bottom {
+  bottom: 0;
+  height: 200px;
+  background-image: url(/assets/boots-bottom.svg);
+} */
